@@ -19,3 +19,7 @@ You have to set your Xcode BundleID on the Facebook App manger.
 ## Please
 
 If you have something similar on Android, consider sending a pull request so we can add this plugin to the registry.
+
+## License
+
+Apache 2.0
