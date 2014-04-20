@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="net.jchrisa.FacebookLogin" version="0.0.1">
+  <name>FacebookLogin</name>
+  <description>Uses the builtin login on iOS</description>
+  <js-module name="FacebookLogin" src="www/FacebookLogin.js">
+    <clobbers target="cordova.plugins.FacebookLogin" />
+  </js-module>
+  <platform name="ios">
+    <framework src="Social.framework" weak="true" />
+    <framework src="Accounts.framework" weak="true" />
+    <config-file parent="/*" target="config.xml">
+      <feature name="FacebookLogin">
+        <param name="ios-package" value="CDVFacebookLogin" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/CDVFacebookLogin.m" />
+  </platform>
+</plugin>
